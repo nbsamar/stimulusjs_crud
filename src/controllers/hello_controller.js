@@ -2,8 +2,12 @@ import {Controller} from "stimulus"
 
 export default class extends Controller {
     connect() {
-        const target_element = this.targets.find("name")
-        const name = target_element.value
-        console.log(`Hey! ${name}`, this.element)
+        console.log(`Hey ${this.name}!`, this.element)
+    }
+    get name() {
+        return this.inputElement.value
+    }
+    get inputElement() {
+        return this.targets.find("name")
     }
 }
