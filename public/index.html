@@ -10,9 +10,33 @@
     <input data-target="hello.name" type="text">
     <button data-action="click->hello#connect">Greet</button>
 </div>
+
 <div data-controller="clipboard">
     PIN: <input data-target="clipboard.copy_text" type="text" value="1234" readonly>
     <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
+</div>
+
+<div data-controller="clipboard">
+    PIN: <input data-target="clipboard.copy_text" type="text" value="6798" readonly>
+    <button data-action="clipboard#copy">Copy this Now</button>
+    <a href="#" data-action="clipboard#copy">Copy</a>
+</div>
+
+<div data-controller="slideshow">
+    <button data-action="slideshow#previous">Previous</button>
+    <button data-action="slideshow#next">Next</button>
+    <div data-target="slideshow.slide" class="slide">🐵</div>
+    <div data-target="slideshow.slide" class="slide">🙈</div>
+    <div data-target="slideshow.slide" class="slide">🙉</div>
+    <div data-target="slideshow.slide" class="slide">🙊</div>
+</div>
+<div data-controller="slideshow" data-slideshow-index="1">
+    <button data-action="slideshow#previous">Previous</button>
+    <button data-action="slideshow#next">Next</button>
+    <div data-target="slideshow.slide" class="slide">1</div>
+    <div data-target="slideshow.slide" class="slide">12</div>
+    <div data-target="slideshow.slide" class="slide">123</div>
+    <div data-target="slideshow.slide" class="slide">1234</div>
 </div>
 </body>
 </html>
